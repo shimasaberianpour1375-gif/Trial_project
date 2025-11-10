@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 with agg as (
   select
@@ -30,7 +30,7 @@ select
   f.month_key,
   d.year,
   d.month,
-  f.tag_id,
+  t.tag_name,
   f.question_count,
   f.answered_count,
   f.unanswered_rate,
@@ -39,3 +39,5 @@ select
 from final f
 left join {{ ref('dim_date') }} d
   on d.month_key = f.month_key
+left join {{ ref('dim_tag') }} t
+  on t.tag_id = f.tag_id
