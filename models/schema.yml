@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_tag
+    columns:
+      - name: tag_id
+        tests: [unique, not_null]
+
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests: [unique, not_null]
+
+  - name: fct_questions
+    columns:
+      - name: question_id
+        tests: [unique, not_null]
+      - name: date_key
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+  - name: bridge_question_tag
+    columns:
+      - name: tag_id
+        tests:
+          - relationships:
+              to: ref('dim_tag')
+              field: tag_id
+      - name: question_id
+        tests:
+          - relationships:
+              to: ref('fct_questions')
+              field: question_id
