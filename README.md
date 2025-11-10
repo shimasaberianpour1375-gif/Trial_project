@@ -18,7 +18,8 @@ BigQuery public dataset:
 - marts → KPI outputs
 
 ### Star schema
-<img width="1886" height="316" alt="image" src="https://github.com/user-attachments/assets/f8d209fc-33c2-468c-a441-a521b83a4fb3" />
+<img width="1884" height="422" alt="image" src="https://github.com/user-attachments/assets/42818aac-20ba-4250-83de-8b23ec33c826" />
+
 
 **Fact table**
 - `fct_questions`
