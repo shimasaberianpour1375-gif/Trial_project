@@ -1,4 +1,4 @@
-# Stack Overflow Tag Unanswered Trend (dbt + BigQuery)
+# Stack Overflow Tag Unanswered Trend (dbt and BigQuery)
 ## Project links
 - [Looker Studio Dashboard](https://lookerstudio.google.com/s/icf5w4u70h8)
 - [BigQuery Project](https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1snotional-gist-474313-e1!2sdbt_shimasaberianpour1375)
