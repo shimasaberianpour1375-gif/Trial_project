@@ -8,7 +8,7 @@ tags as (
 ),
 fact as (
   select question_id
-  from {{ ref('fct_questions') }}   -- فقط سوال‌های موجود در فکت
+  from {{ ref('fct_questions') }}   
 )
 
 select distinct
@@ -17,3 +17,4 @@ select distinct
 from link l
 join fact f using (question_id)
 join tags t using (tag_name)
+
